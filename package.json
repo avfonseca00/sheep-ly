@@ -1,0 +1,21 @@
+{
+  "name": "sheep-ly",
+  "version": "1.0.0",
+  "description": "Fullstack URL shortener using NextJS",
+  "main": "index.js",
+  "scripts": {
+    "co": "sui-mono commit",
+    "dev": "concurrently \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VillaDev",
+  "license": "ISC",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "dependencies": {
+    "@s-ui/mono": "^2.45.0",
+    "concurrently": "^9.1.2"
+  }
+}
