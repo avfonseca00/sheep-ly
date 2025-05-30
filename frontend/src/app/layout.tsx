@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${poppins.variable} antialiased`}
+        className={`${poppins.variable} antialiased`}
       >
         <Header/>
         <main className="flex flex-col gap-16 items-center w-full">
