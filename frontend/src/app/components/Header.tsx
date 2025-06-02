@@ -8,7 +8,7 @@ export default function Header() {
             <nav className="flex justify-between w-full lg:max-w-5xl xl:max-w-6xl p-6">
                 <div className="flex gap-10 items-center">
                     <a href="#" className="p-1.5">
-                        <img src="/next.svg" className="w-auto h-6 bg-cy" alt="Logo"/>
+                        <img src="/sheeply.svg" className="w-auto h-8 bg-cy" alt="Logo"/>
                     </a>
                     <div className="hidden md:flex gap-9">
                         <a href="" className="text-sm text-grayish-violet font-bold">Features</a>
