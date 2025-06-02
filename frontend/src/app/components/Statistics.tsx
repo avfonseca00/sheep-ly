@@ -1,6 +1,4 @@
-type Props = {}
-
-export default function Statistics({}: Props) {
+export default function Statistics() {
     return (
         <div className="flex flex-col items-center w-full bg-grayish-violet-light pt-42.5">
             <div className=" flex flex-col w-full lg:max-w-5xl xl:max-w-6xl">
