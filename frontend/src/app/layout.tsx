@@ -25,10 +25,8 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased`}
       >
         <Header/>
-        <main className="flex flex-col gap-16 items-center w-full">
-          <div className="flex flex-col items-center w-full lg:max-w-5xl xl:max-w-7xl">
+        <main className="flex flex-col  items-center w-full">
             {children}
-          </div>
         </main>
       </body>
     </html>
