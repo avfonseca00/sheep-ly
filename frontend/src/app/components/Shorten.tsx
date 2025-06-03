@@ -12,6 +12,11 @@ export default function Shorten() {
                     </Button>
                 </form>
             </div>
+            <div className="flex flex-col gap-6 md:gap-4 w-full lg:max-w-5xl xl:max-w-6xl">
+                <LinkCard link="http://mylink.com/exampleof/largelink" short="http://sheep-ly.com/gT7xC8"/>
+                <LinkCard link="http://mylink.com/exampleof/largelink" short="http://sheep-ly.com/gT7xC8"/>
+                <LinkCard link="http://mylink.com/exampleof/largelink" short="http://sheep-ly.com/gT7xC8"/>
+            </div>
         </div>
     )
 }
