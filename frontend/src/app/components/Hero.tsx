@@ -16,7 +16,6 @@ export default function Hero() {
                     Get Started
                 </ButtonRounded>
             </div>
-            <Shorten/>
         </div>
     )
 }
