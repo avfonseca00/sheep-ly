@@ -1,5 +1,4 @@
 import ButtonRounded from "./ButtonRounded";
-import Shorten from "./Shorten";
 
 export default function Hero() {
     return (
