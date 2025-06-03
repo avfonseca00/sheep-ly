@@ -11,9 +11,9 @@ export default function Header() {
                         <img src="/sheeply.svg" className="w-auto h-8 bg-cy" alt="Logo"/>
                     </a>
                     <div className="hidden md:flex gap-9">
-                        <a href="" className="text-sm text-grayish-violet font-bold">Features</a>
-                        <a href="" className="text-sm text-grayish-violet font-bold">Pricing</a>
-                        <a href="" className="text-sm text-grayish-violet font-bold">Resources</a>
+                        <a href="" className="text-sm text-grayish-violet hover:text-very-dark-violet transition-all font-bold">Features</a>
+                        <a href="" className="text-sm text-grayish-violet hover:text-very-dark-violet transition-all font-bold">Pricing</a>
+                        <a href="" className="text-sm text-grayish-violet hover:text-very-dark-violet transition-all font-bold">Resources</a>
                     </div>
                 </div>
                 <div className="flex items-center">
