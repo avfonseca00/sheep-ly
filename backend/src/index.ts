@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import connectDB from './config/db';
+import connectDB from './config/db.js';
+import urlRoutes from './routes/index.js';
+import { redirectLink } from './controllers/linkController.js'
 import 'dotenv/config';
 
 const app = express();
@@ -12,6 +14,10 @@ app.use(express.json());
 
 // Conexión a MongoDB
 connectDB();
+
+// Rutas
+app.use('/api', urlRoutes);
+app.get('/:shortId', (req, res) => {redirectLink(req, res)});
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
