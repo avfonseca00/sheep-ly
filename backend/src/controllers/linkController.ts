@@ -8,11 +8,12 @@ const {linkModel} = models
 export const shortenLink = async (req: Request, res: Response) => {
     const { originalLink } = req.body;
     const shortId = nanoid(8);
+    const protocol = req.headers['x-forwarded-proto'] || 'http';
     const host = req.headers.host; // Obtener el host del request
 
     try {
         await linkModel.create({ shortId, originalLink });
-        res.json({ shortLink: `http://${host}/${shortId}` }); 
+        res.json({ shortLink: `${protocol}://${host}/${shortId}` });
     } catch (error) {
         res.status(500).json({ error: 'Error al acortar la URL' });
     }
