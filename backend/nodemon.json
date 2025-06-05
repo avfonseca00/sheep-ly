@@ -1,0 +1,6 @@
+{
+    "watch": ["src"],
+    "ext": "ts,js",
+    "exec": "node --import \"data:text/javascript,import { register } from 'node:module'; import { pathToFileURL } from 'node:url'; register('ts-node/esm', pathToFileURL('./'));\" src/index.ts",
+    "verbose": true
+}

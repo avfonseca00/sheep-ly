@@ -1,7 +1,7 @@
-import urlModel from "./Url"
+import linkModel from "./Link.js"
 
 const models = {
-    urlModel
+    linkModel
 }
 
 export default models
