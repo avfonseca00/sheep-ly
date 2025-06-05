@@ -1,15 +1,15 @@
 import { Schema, model, Document } from 'mongoose';
 
-interface IUrl extends Document {
+interface ILink extends Document {
     shortId: string;
-    originalUrl: string;
+    originalLink: string;
     createdAt: Date;
 }
 
-const urlSchema = new Schema<IUrl>({
+const linkSchema = new Schema<ILink>({
     shortId: { type: String, required: true, unique: true },
-    originalUrl: { type: String, required: true },
+    originalLink: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
 });
 
-export default model<IUrl>('Url', urlSchema);
+export default model<ILink>('Link', linkSchema);
