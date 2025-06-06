@@ -11,7 +11,7 @@ export default function Hero() {
                     <h1 className="text-dark-violet text-[40px] md:text-5xl md:leading-13 lg:text-6xl lg:leading-16 md:text-left xl:text-[80px] xl:leading-22.5 font-bold leading-12 tracking-tight text-center">More than just shorter links</h1>
                     <p className="text-grayish-violet text-lg md:text-left xl:text-[22px] xl:max-w-[550px] xl:leading-8 text-center leading-7">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
                 </div>
-                <ButtonRounded variant="lg">
+                <ButtonRounded size="lg">
                     Get Started
                 </ButtonRounded>
             </div>

@@ -22,7 +22,7 @@ export default function Header() {
                     </button>
                     <div className="md:flex gap-4 hidden ">
                         <ButtonLink>Login</ButtonLink>
-                        <ButtonRounded variant="sm">Sign Up</ButtonRounded>
+                        <ButtonRounded size="sm">Sign Up</ButtonRounded>
                     </div>
                 </div>
             </nav>
