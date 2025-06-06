@@ -8,7 +8,6 @@ const {linkModel} = models
 export const shortenLink = async (req: Request, res: Response) => {
     const { originalLink } = req.body;
     const shortId = nanoid(8);
-    const protocol = req.headers['x-forwarded-proto'] || 'http';
 
     try {
         await linkModel.create({ shortId, originalLink });

@@ -17,6 +17,13 @@ connectDB();
 // Rutas
 app.use('/api', urlRoutes);
 
+// Manejo de rutas no encontradas
+app.use((_req, res) => {
+    res.status(404).json({ message: 'Ruta no encontrada' });
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+export default app;
