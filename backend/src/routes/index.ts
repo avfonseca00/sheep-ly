@@ -4,29 +4,34 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const router = Router();
-const __dirname = dirname(fileURLToPath(import.meta.url)); // Reemplazo de __dirname en ESM
-const PATH = __dirname;
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const removeExtension = (filename: string) => {
     return filename.split('.').shift();
 };
 
+// Ruta de salud (opcional pero útil)
+router.get('/health', (_req, res) => {
+    res.json({ status: 'OK' });
+});
+
+// Carga estática de rutas (mejor para producción)
+const routesToLoad = [
+    'links'    // Corresponde a links.ts
+];
+
 const loadRoutes = async () => {
-    const files = readdirSync(PATH);
-    for (const file of files) {
-        const name = removeExtension(file);
-        if (name !== 'index') {
-            try {
-                // Importación dinámica con extensión explícita (necesaria en ESM)
-                const module = await import(`./${file}?ts=${Date.now()}`); // Usamos un query param para evitar caché en desarrollo
-                router.use(`/${name}`, module.default);
-            } catch (err) {
-                console.error(`Error al cargar la ruta ${file}:`, err);
-            }
+    for (const routeName of routesToLoad) {
+        try {
+            const module = await import(`./${routeName}.js`); // Nota: .js aunque el fuente sea .ts
+            router.use(`/${routeName}`, module.default);
+            console.log(`✅ Ruta /${routeName} cargada correctamente`);
+        } catch (err) {
+            console.error(`❌ Error al cargar ruta ${routeName}:`, err);
         }
     }
 };
 
-await loadRoutes(); // Cargamos las rutas antes de exportar
+await loadRoutes();
 
 export default router;
