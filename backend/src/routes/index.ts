@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import linksRouter from './links.js'; // Importa como .js (compilado)
+import linksRouter from './links.js';
 
 const router = Router();
 
