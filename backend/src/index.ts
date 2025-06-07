@@ -19,11 +19,11 @@ app.use('/api', urlRoutes);
 
 // Manejo de rutas no encontradas
 app.use((_req, res) => {
-    res.status(404).json({ message: 'Ruta no encontrada' });
+    res.status(404).json({ message: 'Route not found' });
 });
 
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
 
 export default app;

@@ -17,6 +17,7 @@ export default function LinkCard({link, short}: Props) {
             await navigator.clipboard.writeText(short);
             setCopied(true)
         } catch (error) {
+            console.log('error', error)
             setCopied(false)
         }
     }
