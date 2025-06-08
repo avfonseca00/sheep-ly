@@ -8,17 +8,17 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const sizeClasses: Record<ButtonSize, string> = {
-    sm: 'text-sm px-0 w-full md:w-[104px] py-1.5',
-    lg: 'text-xl px-10 py-3.5 rounded-lg md:w-fit w-full',
+    sm: 'text-sm px-0 w-full md:w-[104px] py-2.5',
+    lg: 'text-lg py-2.5 md:text-xl px-10 md:py-3.5 rounded-lg md:w-fit w-full',
 };
 export default function Button({ className = '', children, size = 'sm', ...props }: ButtonProps) {
     return (
         <button
         {...props}
         className={`flex items-center justify-center
-        text-sm px-0 py-2.5 rounded-sm
+        rounded-sm
         bg-cyan hover:bg-cyan-900 transition-all cursor-pointer
-        text-white font-semibold tracking-wide ${sizeClasses[size]} ${className}`}>
+        text-white font-bold tracking-wide ${sizeClasses[size]} ${className}`}>
             {children}
         </button>
     )

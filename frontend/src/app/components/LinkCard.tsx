@@ -28,7 +28,7 @@ export default function LinkCard({link, short}: Props) {
                 <p className="text-md md:text-lg w-full overflow-hidden whitespace-nowrap overflow-ellipsis">{link}</p>
             </div>
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 p-4">
-                <a href={short} className="text-md md:text-lg w-auto text-cyan ">{short}</a>
+                <a href={short} className="text-md md:text-lg w-auto text-cyan overflow-hidden overflow-ellipsis whitespace-nowrap">{short}</a>
                 <Button size='sm' className={copied ? 'bg-dark-violet':''} onClick={copyToClipboard}>
                     {copied? 'Copied!': 'Copy'}
                 </Button>
