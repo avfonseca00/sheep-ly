@@ -15,9 +15,11 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY === 0
-      ? setOnTop(true)
-      : setOnTop(false)
+      if (window.scrollY === 0) {
+        setOnTop(true);
+      } else {
+        setOnTop(false);
+      }
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
