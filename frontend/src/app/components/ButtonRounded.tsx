@@ -10,7 +10,7 @@ interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const sizeClasses: Record<ButtonSize, string> = {
     sm: 'text-sm px-6 py-2',
-    md: 'py-2 px-4 text-base',
+    md: 'py-2.5 px-4 text-lg w-full',
     lg: 'text-lg px-10 py-3.5',
 };
 export default function ButtonRounded({className, children, size = "sm", link, ...props}: ButtonProps) {
