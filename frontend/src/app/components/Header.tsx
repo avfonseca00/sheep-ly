@@ -34,7 +34,7 @@ export default function Header({ onTop }:Props) {
         <header className={`flex justify-center bg-white sticky top-0 z-10 ${onTop? 'shadow-none' : 'shadow-md'}`}>
             <nav className="flex justify-between w-full lg:max-w-5xl xl:max-w-6xl p-6">
                 <div className="flex gap-10 items-center">
-                    <a href="#" className="p-1.5">
+                    <a href="/" className="p-1.5">
                         <img src="/sheeply.svg" className="w-auto h-8 bg-cy" alt="Logo"/>
                     </a>
                     <div className="hidden md:flex gap-9">
