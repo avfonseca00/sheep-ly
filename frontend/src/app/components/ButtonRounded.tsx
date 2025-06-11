@@ -20,7 +20,7 @@ export default function ButtonRounded({className, children, size = "sm", link, .
         href={link}
         className={`flex 
         justify-center items-center w-fit bg-cyan hover:bg-cyan-900 
-        transition-all text-white cursor-pointer
+        transition-colors text-white cursor-pointer
         font-bold rounded-full tracking-wider ${sizeClasses[size]} ${className}`}>
             {children}
         </a>
